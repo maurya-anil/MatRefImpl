@@ -1,0 +1,23 @@
+table {
+    width: 50%;
+  }
+  table.mat-row 
+  {
+    background: red;
+
+  }
+  .mat-row.hovered {
+      background: #eee;
+  }
+  
+  .mat-row.highlighted {
+    background: #999;
+  }
+  
+
+  .container {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-gap: 20px;
+    background: #fff;
+  }

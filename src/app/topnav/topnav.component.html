@@ -1,8 +1,10 @@
 <mat-toolbar>
     <mat-toolbar-row>
         <span>Reference App for Angular Material</span>
-        <button mat-button>Client</button>
-        <button mat-button>About</button>
+        <button mat-button (click)="router.navigate(['/client']);">Client</button>
+        <button mat-button (click)="router.navigate(['/about']);">About</button>
+        <button mat-button (click)="router.navigate(['/customcomponent']);">Custom component</button>
+        <button mat-button (click)="router.navigate(['/masterdetail']);">Master detail</button>
         <span class="spacer"></span>
         <a routerLink="client">Client</a>
         <a routerLink="address">Address Form</a>

@@ -1,0 +1,11 @@
+<h1>Custom component usage test</h1>
+<form [formGroup]="myForm">
+<my-input formControlName="name" id="name" label="Name" value="Anil Maurya"></my-input>
+<my-input formControlName="age" id="age" label="Age" value="59"></my-input>
+
+<button type="button" class="btn" (click)="Show()">Show</button>
+<button type="button" class="btn" (click)="ChangeData()">Change Data</button>
+  
+</form>
+
+{{myForm.value | json}}
