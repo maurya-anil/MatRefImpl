@@ -1,6 +1,8 @@
 import {SelectionModel} from '@angular/cdk/collections';
 import {Component} from '@angular/core';
 import {MatTableModule, MatTableDataSource, MatTable} from '@angular/material/table';
+import { FormBuilder, FormGroup, FormControl, Validators } from '@angular/forms';
+
 
 export interface PeriodicElement {
   name: string;
@@ -35,6 +37,45 @@ export class MasterDetailFormComponent {
   displayedColumns: string[] = ['position', 'name', 'weight', 'symbol'];
   dataSource = new MatTableDataSource<PeriodicElement>(ELEMENT_DATA);
   selection = new SelectionModel<PeriodicElement>(false, []);
+
+  formGroup: FormGroup = this.formBuilder.group({
+    'name': [null, Validators.required],
+    'weight': [null, Validators.required],
+    'symbol': [null, Validators.required],
+  }
+  );
+
+  constructor (private formBuilder: FormBuilder)
+  {
+  
+  }
+
+  ShowDataForRow(row:number)
+  {
+    // this.selection.toggle(row);
+    console.log ("row number" + row + " clicked");  
+  }
+  clickedMe(element:PeriodicElement)
+  {
+    this.name.setValue (element.name);
+    this.weight.setValue (element.weight);
+    this.symbol.setValue (element.symbol);
+    // alert (element.name);
+  }
+
+
+  // form field names
+
+  get name() {
+    return this.formGroup.get('name') as FormControl
+  }
+  get weight() {
+    return this.formGroup.get('weight') as FormControl
+  }
+  get symbol() {
+    return this.formGroup.get('symbol') as FormControl
+  }
+
 }
 
 

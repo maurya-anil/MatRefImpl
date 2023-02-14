@@ -1,17 +1,16 @@
 table {
     width: 50%;
   }
-  table.mat-row 
+  tr
   {
-    background: red;
-
+    background: yellow;
   }
-  .mat-row.hovered {
-      background: #eee;
+  .mat-row:hover {
+      background: green;
   }
   
-  .mat-row.highlighted {
-    background: #999;
+  tr.highlighted {
+    background: blue;
   }
   
 
