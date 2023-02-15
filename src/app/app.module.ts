@@ -22,6 +22,9 @@ import { AddressComponent } from './address/address.component';
 import { MyInputComponent } from './components/my-input/my-input.component';
 import { CustomComponentUsageComponent } from './custom-component-usage/custom-component-usage.component';
 import { MasterDetailFormComponent } from './master-detail-form/master-detail-form.component';
+import { AccordianDemoComponent } from './components/accordian-demo/accordian-demo.component';
+import { TabularDataComponent } from './components/tabular-data/tabular-data.component';
+import { TabularDataHostComponent } from './tabular-data-host/tabular-data-host.component';
 
 @NgModule({
   declarations: [
@@ -32,7 +35,10 @@ import { MasterDetailFormComponent } from './master-detail-form/master-detail-fo
     AddressComponent,
     MyInputComponent,
     CustomComponentUsageComponent,
-    MasterDetailFormComponent
+    MasterDetailFormComponent,
+    AccordianDemoComponent,
+    TabularDataComponent,
+    TabularDataHostComponent,
   ],
   imports: [
     BrowserModule,
